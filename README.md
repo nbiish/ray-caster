@@ -3,7 +3,7 @@
 
 ## Install  
 * Linux [Ollama](https://ollama.com/download/linux)  
-* maxOS [Ollama](https://ollama.com/download/linux)  
+* macOS [Ollama](https://ollama.com/download/linux)  
 * Windows [Ollama](https://ollama.com/download/linux)  
 
 ```bash
