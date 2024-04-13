@@ -6,13 +6,18 @@
 * maxOS [Ollama](https://ollama.com/download/linux)  
 * Windows [Ollama](https://ollama.com/download/linux)  
 
-```bash
+```
 ollama run your-wildest-dreams "ober-der"  
 ```  
- 
+
+ ### Customizing ollama:
+* Modelfiles  
+```
+TODO
+```
 
 ---  
-### Raycast stuff:  
+## Raycast stuff:  
 * scripts  
 ```
 # create a .env in ../raycast/scripts
@@ -26,7 +31,3 @@ touch .env
 
 echo 'SOME_API_KEY=your-key' >> .env
 ```
-
-### Customizing ollama:
-* Modelfiles  
-
