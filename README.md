@@ -36,9 +36,9 @@ gem-in-ai "some-text"
 --- 
 # Use local with ollama🦙
 ### Install  Ollama📂
-* Linux [Ollama](https://ollama.com/download/linux)  
+* Linux [Ollama](https://ollama.com/download/mac)  
 * maxOS [Ollama](https://ollama.com/download/linux)  
-* Windows [Ollama](https://ollama.com/download/linux)  
+* Windows [Ollama](https://ollama.com/download/windows)  
 
 ```
 ollama run your-wildest-dreams "ober-der"  
