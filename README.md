@@ -1,4 +1,4 @@
-# all-ama pack of handy-dandies  
+# all-ama pack of handy-dandies 👍🧿👄🧿💻   
 ---  
 
 ## Install  
@@ -16,13 +16,17 @@ ollama run your-wildest-dreams "ober-der"
 * scripts  
 ```
 # create a .env in ../raycast/scripts
-touch .env
 
+touch .env
+```  
+  
+
+```
 # add api_keys in ../scripts
+
 echo 'SOME_API_KEY=your-key' >> .env
 ```
 
 ### Customizing ollama:
 * Modelfiles  
 
-## 👍🧿👄🧿💻
