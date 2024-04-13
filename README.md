@@ -36,8 +36,8 @@ gem-in-ai "some-text"
 --- 
 # Use local with ollama🦙
 ### Install  Ollama📂
-* Linux [Ollama](https://ollama.com/download/mac)  
 * maxOS [Ollama](https://ollama.com/download/linux)  
+* Linux [Ollama](https://ollama.com/download/mac)  
 * Windows [Ollama](https://ollama.com/download/windows)  
 
 ```
