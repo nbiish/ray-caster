@@ -17,7 +17,7 @@ echo ''
 echo 'codegemma:'
 echo ''
 models=("codegemma")
-query="""IMAGINE YOU'RE OUTPUTTING THE FOLLOWING AS A TERMINAL AND STRICTLY OUTPUT WITH NOTHING ELSE. DO NOT BE VERBOSE: $(pbpaste)"""
+query="""IMAGINE YOU'RE OUTPUTTING AS A TERMINAL AND STRICTLY OUTPUT NOTHING ELSE. DO NOT BE VERBOSE. IMAGINE RUNNING UP AND DOWN THE CODE TO THOROUGHLY CONSIDER ALL OF THE FOLLOWING:\n\n$(pbpaste)"""
 
 for model_name in "${models[@]}"; do
     result=$(ollama run $model_name <<< "$query")
