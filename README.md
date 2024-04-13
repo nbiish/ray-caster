@@ -1,7 +1,7 @@
 # all-ama pack of handy-dandies 👍🧿👄🧿💻   
 ---  
 
-## Install  
+## Install  Ollama
 * Linux [Ollama](https://ollama.com/download/linux)  
 * maxOS [Ollama](https://ollama.com/download/linux)  
 * Windows [Ollama](https://ollama.com/download/linux)  
