@@ -40,8 +40,10 @@ usage=$(echo "$response" | jq -r '.usage')
 content=$(echo "$response" | jq -r '.choices[0].message.content')
 completion_time=$(echo "$response" | jq -r '.usage.completion_time')
 
-printf '%.0s-' {1..81}
 echo ''
+echo ''
+echo ''
+printf '%.0s-' {1..81}
 echo ''
 echo "INPUT:"
 echo "$1"
@@ -52,10 +54,15 @@ echo "$model"
 printf '%.0s-' {1..81}
 echo ''
 echo "Response:"
+printf '%.0s-' {1..81}
 echo ''
 echo "$content"
 printf '%.0s-' {1..81}
 echo ''
-echo 'Stats for nerds:'
+echo ''
+echo ''
 echo '👍🧿👄🧿💻:'
+echo 'Stats for nerds:'
+printf '%.0s-' {1..81}
+echo ''
 echo "Usage: $usage"
