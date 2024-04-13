@@ -14,7 +14,7 @@ client = anthropic.Anthropic(
 )
 
 message = client.messages.create(
-    model="claude-3-opus-20240229",
+    model="claude-3-haiku-20240307",
     max_tokens=1000,
     temperature=0.0,
     system="You're having a conversation with a heavy-equipment engineer, programmer, and cybersecurity student. Be Concise. We are able to accomplish any task together.",
@@ -24,8 +24,8 @@ message = client.messages.create(
 )
 
 # Calculate the costs
-input_cost = message.usage.input_tokens * 15.00 / 1000000
-output_cost = message.usage.output_tokens * 75.00 / 1000000
+input_cost = message.usage.input_tokens * 0.25 / 1000000
+output_cost = message.usage.output_tokens * 1.25 / 1000000
 total_cost = input_cost + output_cost
 
 # Print the formatted output
@@ -50,7 +50,7 @@ print('Stats for nerds:')
 print('-' * 81)
 print(f'Token {message.usage}')
 print()
-print("claude-3-opus costs as of 4-12-24:")
+print("claude-3-haiku costs as of 4-12-24:")
 print(f'Token-in Cost : ${input_cost:<9.9f} USD')
 print(f'Token-out Cost: ${output_cost:<9.9f} USD')
 print()

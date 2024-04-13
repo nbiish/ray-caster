@@ -54,11 +54,12 @@ echo "$model"
 printf '%.0s-' {1..81}
 echo ''
 echo "Response:"
+echo -e '\n'$(printf '%.0s🍓' {1..36})''
 printf '%.0s-' {1..81}
 echo ''
 echo "$content"
 printf '%.0s-' {1..81}
-echo ''
+echo -e '\n'$(printf '%.0s🫐' {1..36})''
 echo ''
 echo ''
 echo '👍🧿👄🧿💻:'

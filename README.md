@@ -10,15 +10,15 @@
 ollama run your-wildest-dreams "ober-der"  
 ```  
 
- ### Customizing ollama:
-* Modelfiles  
+### Customizing ollama:
+#### Modelfiles  
 ```
 TODO
 ```
 
 ---  
-## Raycast stuff:  
-* scripts  
+## [Raycast](https://www.raycast.com/) stuff:  
+### scripts  
 ```
 # create a .env in ../raycast/scripts
 

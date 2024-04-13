@@ -1,11 +1,11 @@
 #!/bin/bash
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title clau-ber!
+# @raycast.title clau-son
 # @raycast.mode fullOutput
 # Optional parameters:
-# @raycast.icon 🦾
-# @raycast.description Generate a OPUS response using the ANTHROPIC API
+# @raycast.icon 🐙
+# @raycast.description Generate a sonnet response using the ANTHROPIC API
 # @raycast.author nbiish
 # @raycast.authorURL https://raycast.com/nbiish
 # @raycast.argument1 { "type": "text", "placeholder": "question or input" }
@@ -34,7 +34,7 @@ else
 fi
 
 # Run the Python script
-python3 clau-ber.py "$1"
+python3 clau-son.py "$1"
 
 # Deactivate the venv
 deactivate
