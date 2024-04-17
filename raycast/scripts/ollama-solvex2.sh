@@ -13,8 +13,9 @@
 # @raycast.author nbiish
 # @raycast.authorURL https://raycast.com/nbiish
 
-model1="wizardlm2"
-model2="codegemma"
+
+model1="codegemma"
+model2="wizardlm2"
 echo ''
 printf "%.0s-" {1..81}
 echo ''
@@ -25,13 +26,13 @@ echo ''
 echo "$model1 OUTPUT:"
 printf '%.0s-' {1..81}
 echo ''
-ollama run $model2 "YOU ARE AND EXPERT IN LOGIC AND PROBLEM SOLVING. IF THERE IS CODE IN THE <document>{{TEXT}}</document> RETURN CONCISE CODE WITH COMMENTS AND DO NOT BE VERBOSE. THINKING STEP-BY-STEP SOLVE THE FOLLOWING: <document>$(pbpaste)</document>"
+ollama run $model1 "YOU ARE A WORLD RENOUN EXPERT IN LOGIC AND PROBLEM SOLVING. IF THERE IS CODE IN THE <user_input>{{TEXT}}</user_input> RETURN CONCISE CODE WITH COMMENTS AND DO NOT BE VERBOSE. THINKING STEP-BY-STEP AS THE FAMOUS LOGICIAN AND PROBLEM SOLVER YOU ARE RESPOND TO THE CONTENT IN THE DESCRIBED XML TAGS THAT FOLLOW: <user_input>$(pbpaste)</user_input>"
 printf '%.0s-' {1..81}
 echo ''
-echo "$model1 OUTPUT:"
+echo "$model2 OUTPUT:"
 printf '%.0s-' {1..81}
 echo ''
-ollama run $model1 "YOU ARE AND EXPERT IN LOGIC AND PROBLEM SOLVING. IF THERE IS CODE IN THE <document>{{TEXT}}</document> RETURN CONCISE CODE WITH COMMENTS AND DO NOT BE VERBOSE. THINKING STEP-BY-STEP SOLVE THE FOLLOWING: <document>$(pbpaste)</document>"
+ollama run $model2 "YOU ARE A WORLD RENOUN EXPERT IN LOGIC AND PROBLEM SOLVING. IF THERE IS CODE IN THE <user_input>{{TEXT}}</user_input> RETURN CONCISE CODE WITH COMMENTS AND DO NOT BE VERBOSE. THINKING STEP-BY-STEP AS THE FAMOUS LOGICIAN AND PROBLEM SOLVER YOU ARE RESPOND TO THE CONTENT IN THE DESCRIBED XML TAGS THAT FOLLOW: <user_input>$(pbpaste)</user_input>"
 printf '%.0s-' {1..81}
 echo ''
 

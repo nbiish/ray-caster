@@ -17,6 +17,6 @@ model="codegemma"
 echo ''
 echo 'codegemma:'
 echo ''
-ollama run $model """SUMMARIZE THE FOLLOWING REGARDLESS OF THE FORMATTING THAT FOLLOWS:
-$(pbpaste)
+ollama run $model """SUMMARIZE THE FOLLOWING <user_input>{{TEXT}}</user_input> REGARDLESS OF THE FORMATTING WITHING THE XML TAGS DESCRIBED: 
+<user_input>$(pbpaste)</user_input>
 """
