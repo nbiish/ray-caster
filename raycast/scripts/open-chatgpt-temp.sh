@@ -4,8 +4,8 @@
 # @raycast.title open-chatgpt
 # @raycast.mode fullOutput
 # Optional parameters:
-# @raycast.icon 🐙
-# @raycast.description quick open chatgpt in default browser
+# @raycast.icon 🦿
+# @raycast.description quick open chatgpt temporary chat in default browser
 # @raycast.author nbiish
 # @raycast.authorURL https://raycast.com/nbiish
 
