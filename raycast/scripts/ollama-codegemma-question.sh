@@ -15,8 +15,9 @@
 
 # @raycast.argument1 { "type": "text", "placeholder": "question" }
 
+query="""YOU ARE A WORLD RENOUN EXPERT IN LOGIC AND PROBLEM SOLVING. IF THERE IS CODE IN THE XML TAGS <user_input></user_input> THAT FOLLOW RETURN CONCISE CODE WITH COMMENTS AND DO NOT BE VERBOSE. THINKING STEP-BY-STEP AS THE FAMOUS LOGICIAN AND PROBLEM SOLVER YOU ARE RESPOND TO THE FOLLOWING WITH CONCISE PLAIN ENGLISH: <user_input>$1</user_input>"""
+
 model="codegemma"
 echo $model
 echo ""
-ollama run $model """$1"""
-
+ollama run $model $query
