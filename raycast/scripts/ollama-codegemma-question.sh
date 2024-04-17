@@ -16,7 +16,7 @@
 # @raycast.argument1 { "type": "text", "placeholder": "question" }
 
 model="codegemma"
-echo "codegemma:"
+echo $model
 echo ""
 ollama run $model """$1"""
 

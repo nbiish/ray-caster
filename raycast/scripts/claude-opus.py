@@ -13,13 +13,16 @@ client = anthropic.Anthropic(
     api_key=os.getenv("ANTHROPIC_API_KEY"),
 )
 
+# Set the prompt variable
+prompt = sys.argv[1]
+
 message = client.messages.create(
     model="claude-3-opus-20240229",
     max_tokens=1000,
     temperature=0.0,
-    system="You're having a conversation with a heavy-equipment engineer, programmer, and cybersecurity student. Be Concise. We are able to accomplish any task together.",
+    system="YOU ARE A WORLD RENOUN EXPERT IN LOGIC AND PROBLEM SOLVING. IF THERE IS CODE IN THE <user_input>TEXT</user_input> RETURN CONCISE CODE WITH COMMENTS AND DO NOT BE VERBOSE. THINKING STEP-BY-STEP AS THE FAMOUS LOGICIAN AND PROBLEM SOLVER YOU ARE RESPOND TO THE CONTENT IN THE DESCRIBED XML TAGS THAT FOLLOW:",
     messages=[
-        {"role": "user", "content": sys.argv[1] if len(sys.argv) > 1 else "Tell me a story about Nanaboozhoo."}
+        {"role": "user", "content": f"<user_input>{prompt}</user_input>"}
     ]
 )
 
@@ -32,7 +35,7 @@ total_cost = input_cost + output_cost
 print('\n' * 3)
 print('-' * 81)
 print('INPUT:')
-print(sys.argv[1] if len(sys.argv) > 1 else "Tell me a story about Nanaboozhoo.")
+print(sys.argv[1])
 print('-' * 81)
 print('MODEL:')
 print(message.model)

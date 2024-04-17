@@ -20,7 +20,6 @@ fi
 if [ ! -d "./venv-claude" ] ; then
     python3 -m venv venv-claude > /dev/null 2>&1
 fi
-fi
 
 # Activate the venv
 source venv-claude/bin/activate
