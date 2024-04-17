@@ -16,6 +16,7 @@ source .env
 
 API_KEY="$GROQ_API_KEY"
 
+query="""$1"""
 
 response=$(curl "https://api.groq.com/openai/v1/chat/completions" \
   -X POST \
@@ -25,7 +26,7 @@ response=$(curl "https://api.groq.com/openai/v1/chat/completions" \
          \"messages\": [
            {
              \"role\": \"user\",
-             \"content\": \"$1\"
+             \"content\": \"$query\"
            }
          ],
          \"model\": \"mixtral-8x7b-32768\",

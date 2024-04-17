@@ -6,7 +6,7 @@
 # @raycast.mode fullOutput
 
 # Optional parameters:
-# @raycast.icon 🤖
+# @raycast.icon 🔨
 
 # Documentation:
 # @raycast.description get a simple question answered by wizardlm2
