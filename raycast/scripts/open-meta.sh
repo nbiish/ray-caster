@@ -4,7 +4,7 @@
 # @raycast.title open-meta
 # @raycast.mode fullOutput
 # Optional parameters:
-# @raycast.icon 🦿
+# @raycast.icon 💨
 # @raycast.description quick open meta ai in default browser
 # @raycast.author nbiish
 # @raycast.authorURL https://raycast.com/nbiish
