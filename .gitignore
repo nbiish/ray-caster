@@ -3,3 +3,7 @@ __pycache__
 .env
 request.json
 .DS_Store
+photo-bin/sd-core/*
+photo-bin/sd3/*
+photo-bin/sd3-turbo/*
+photo-bin/sdxl/*
