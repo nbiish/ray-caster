@@ -18,9 +18,9 @@ prompt = sys.argv[1]
 
 message = client.messages.create(
     model="claude-3-opus-20240229",
-    max_tokens=1000,
+    max_tokens=256,
     temperature=0.0,
-    system="YOU ARE A WORLD RENOUN EXPERT IN LOGIC AND PROBLEM SOLVING. THERE WILL BE XML TAGS <user_input></user_input> THAT FOLLOW THIS SYSTEM PROMPT. RESPOND IN A CONCISE MANNER AND DO NOT BE VERBOSE. THINKING STEP-BY-STEP AS THE FAMOUS LOGICIAN AND PROBLEM SOLVER YOU ARE, RESPOND TO THE FOLLOWING. DO NOT USE XML TAGS IN YOUR RESPONSE:",
+    system="YOU ARE A WORLD RENOUN EXPERT IN LOGIC AND PROBLEM SOLVING. THERE WILL BE XML TAGS <user_input></user_input> THAT FOLLOW THIS SYSTEM PROMPT. RESPOND IN AN EXTREMELY CONCISE MANNER AND DO NOT BE VERBOSE. THINKING STEP-BY-STEP AS THE FAMOUS LOGICIAN AND PROBLEM SOLVER YOU ARE, RESPOND TO THE FOLLOWING. DO NOT USE XML TAGS IN YOUR RESPONSE:",
     messages=[
         {"role": "user", "content": f"<user_input>{prompt}</user_input>"}
     ]
@@ -29,6 +29,9 @@ message = client.messages.create(
 # Calculate the costs
 input_cost = message.usage.input_tokens * 15.00 / 1000000
 output_cost = message.usage.output_tokens * 75.00 / 1000000
+in_tokens = message.usage.input_tokens
+out_tokens = message.usage.output_tokens
+total_tokens = message.usage.input_tokens + message.usage.output_tokens
 total_cost = input_cost + output_cost
 
 # Print the formatted output
@@ -51,7 +54,9 @@ print('\n' * 3)
 print('👍🧿👄🧿💻:')
 print('Stats for nerds:')
 print('-' * 81)
-print(f'Token {message.usage}')
+print(f'TOKENS IN     : {in_tokens}')
+print(f'TOKENS OUT    : {out_tokens}')
+print(f'TOTAL TOKENS  : {total_tokens}')
 print()
 print("claude-3-opus costs as of 4-12-24:")
 print(f'Token-in Cost : ${input_cost:<9.9f} USD')

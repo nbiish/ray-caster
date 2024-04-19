@@ -28,6 +28,9 @@ message = client.messages.create(
 # Calculate the costs
 input_cost = message.usage.input_tokens * 3.00 / 1000000
 output_cost = message.usage.output_tokens * 15.00 / 1000000
+in_tokens = message.usage.input_tokens
+out_tokens = message.usage.output_tokens
+total_tokens = message.usage.input_tokens + message.usage.output_tokens
 total_cost = input_cost + output_cost
 
 # Print the formatted output
@@ -50,7 +53,9 @@ print('\n' * 3)
 print('👍🧿👄🧿💻:')
 print('Stats for nerds:')
 print('-' * 81)
-print(f'Token {message.usage}')
+print(f'TOKENS IN     : {in_tokens}')
+print(f'TOKENS OUT    : {out_tokens}')
+print(f'TOTAL TOKENS  : {total_tokens}')
 print()
 print("claude-3-sonnet costs as of 4-12-24:")
 print(f'Token-in Cost : ${input_cost:<9.9f} USD')
