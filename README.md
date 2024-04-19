@@ -3,35 +3,52 @@
 ### ADDING SCRIPTS TO RAYCAST:
 ```
     1. open raycast
-    2. press CMD+, (CMD+comma)
+    2. press CMD+, <--(CMD+comma)
     3. press CMD+n
     4. select "add script directory"
     5. choose ../where/you/cloned/../scripts
 ```  
+### If you're using Claude, Groq, OpenAI, Google API:
 ```
-# create a .env in ../where/you/cloned/../scripts
+# create a .env in 
+# ../where/you/cloned/../scripts
+# and enter
 
 touch .env
-```  
-  
-```
-# add api_keys in ../scripts
+
+----------------------
+
+# add api_keys in 
+# ../scripts
 
 echo 'SOME_API_KEY=your-key' >> .env
 ```  
-#### OR START FROM [.env-example](https://github.com/nbiish/ray-caster/blob/main/raycast/scripts/.env-example)  
+- for and example check [.env-example](https://github.com/nbiish/ray-caster/blob/main/raycast/scripts/.env-example)
+- or edit../raycast/scripts/.env-example  
+(remove the -example section when done)
+
 ---  
-### HOW TO:
+### HOW TO USE IN RAYCAST:
+
 ```
-use raycast hotkey
-type name of script
+1) use raycast raycast hotkey
+2) type name of script
+
+
+USAGE EXAMPLES:
+--------------------------------------------
+{raycast hotkey} + ollama-solve "some-text"
+
+{raycast hotkey} + claude-haiku "some-text"
+
+{raycast hotkey} + groq-amole "some-text"
+
+{raycast hotkey} + gem-in-ai "some-text"
 ```
+### Customize scripts in:
+
 ```
-EXAMPLES:
-ollama-solve "some-text"
-claude-haiku "some-text"
-groq-amole "some-text"
-gem-in-ai "some-text"
+../raycast/scripts
 ```
 --- 
 # Use local with ollama🦙
@@ -46,14 +63,25 @@ ollama run your-wildest-dreams "ober-der"
 
 ---  
 ## Customizing ollama🛠️:
-### Script
-```
-edit ollama scripts in:
-```
-```
-../raycast/scripts/
-```
 ### Modelfiles  
 ```
 TODO
+- add how-to
+```
+# Use a .bashrc/.zshrc alias instead🦑🤖
+## TODO  
+- add script that adds alias of all .sh files in ../raycast/scripts to .bashrc or .zshrc (check)  
+
+- make it formatted nicely like ##new alias group### 
+
+- test a removal sed command for new script to remove from rc file when user is done
+```
+1) pwd in ../where/you/cloned/../scripts
+(copy output)
+
+2) vim/nano ~/.bashrc OR .zshrc
+
+3) ...
+
+4) ...
 ```
