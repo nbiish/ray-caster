@@ -28,6 +28,6 @@ else
     exit 1
 fi
 # Run the Python script
-python3 python_scripts/gem-in-ai.py "$1"
+python3 python_scripts/call-gem-in-ai.py "$1"
 # Deactivate the venv
 deactivate

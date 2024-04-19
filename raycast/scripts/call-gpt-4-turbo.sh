@@ -33,7 +33,7 @@ else
 fi
 
 # Run the Python script
-python3 python_scripts/gpt-4-turbo.py "$1"
+python3 python_scripts/call-gpt-4-turbo.py "$1"
 
 # Deactivate the venv
 deactivate

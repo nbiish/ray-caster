@@ -33,7 +33,7 @@ else
 fi
 
 # Run the Python script
-python3 python_scripts/claude-opus.py "$1"
+python3 python_scripts/call-claude-opus.py "$1"
 
 # Deactivate the venv
 deactivate

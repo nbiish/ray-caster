@@ -33,7 +33,7 @@ else
 fi
 
 # Run the Python script
-python3 python_scripts/claude-sonnet.py "$1"
+python3 python_scripts/call-claude-sonnet.py "$1"
 
 # Deactivate the venv
 deactivate

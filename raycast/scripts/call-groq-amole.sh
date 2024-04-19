@@ -33,7 +33,7 @@ else
 fi
 
 # Run the Python script
-python3 python_scripts/groq-amole.py "$1"
+python3 python_scripts/call-groq-amole.py "$1"
 
 # Deactivate the venv
 deactivate
