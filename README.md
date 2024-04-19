@@ -68,13 +68,20 @@ ollama run your-wildest-dreams "ober-der"
 TODO
 - add how-to
 ```
-# Use a .bashrc/.zshrc alias instead🦑🤖
+# Use .bashrc/.zshrc alias instead🦑🤖
 ## TODO  
 - add script that adds alias of all .sh files in ../raycast/scripts to .bashrc or .zshrc (check)  
 
-- make it formatted nicely like ##new alias group### 
+- formatt nice like..
+     - ...
+     - ###shell-caster ###
+     - new alias group
+     - ###shell-caster ###
+     - ...
 
-- test a removal sed command for new script to remove from rc file when user is done
+- test a removal sed command for new script to remove from rc file when user is done  
+
+## HOW-TO:
 ```
 1) pwd in ../where/you/cloned/../scripts
 (copy output)
