@@ -23,7 +23,7 @@ touch .env
 
 echo 'SOME_API_KEY=your-key' >> .env
 ```  
-- for and example check [.env-example](https://github.com/nbiish/ray-caster/blob/main/raycast/scripts/.env-example)
+- for an example check [.env-example](https://github.com/nbiish/ray-caster/blob/main/raycast/scripts/.env-example)
 - or edit../raycast/scripts/.env-example  
 (remove the -example section when done)
 
