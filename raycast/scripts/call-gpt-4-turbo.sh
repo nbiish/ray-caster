@@ -1,11 +1,11 @@
 #!/bin/bash
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title gpt-3.5-turbo
+# @raycast.title call-gpt-4-turbo
 # @raycast.mode fullOutput
 # Optional parameters:
-# @raycast.icon 💨
-# @raycast.description Generate a GPT-3.5-turbo response using the OPENAI API
+# @raycast.icon 🦾
+# @raycast.description Generate a GPT4-turbo response using the OPENAI API
 # @raycast.author nbiish
 # @raycast.authorURL https://raycast.com/nbiish
 # @raycast.argument1 { "type": "text", "placeholder": "question or input" }
@@ -25,15 +25,15 @@ fi
 source venv-openai/bin/activate
 
 # Install requirements
-if [ -f "openai-requirements.txt" ]; then
-    pip install -r openai-requirements.txt > /dev/null 2>&1
+if [ -f "reqs/openai-requirements.txt" ]; then
+    pip install -r reqs/openai-requirements.txt > /dev/null 2>&1
 else
-    echo "openai-requirements.txt not found"
+    echo "reqs/openai-requirements.txt not found"
     exit 1
 fi
 
 # Run the Python script
-python3 gpt-3.5-turbo.py "$1"
+python3 python_scripts/gpt-4-turbo.py "$1"
 
 # Deactivate the venv
 deactivate

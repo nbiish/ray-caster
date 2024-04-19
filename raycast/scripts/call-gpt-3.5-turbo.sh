@@ -1,11 +1,11 @@
 #!/bin/bash
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title claude-opus
+# @raycast.title call-gpt-3.5-turbo
 # @raycast.mode fullOutput
 # Optional parameters:
-# @raycast.icon 🦾
-# @raycast.description Generate a OPUS response using the ANTHROPIC API
+# @raycast.icon 💨
+# @raycast.description Generate a GPT-3.5-turbo response using the OPENAI API
 # @raycast.author nbiish
 # @raycast.authorURL https://raycast.com/nbiish
 # @raycast.argument1 { "type": "text", "placeholder": "question or input" }
@@ -17,23 +17,23 @@ if ! command -v python3 &>/dev/null; then
 fi
 
 # Check if venv exists, if not create it
-if [ ! -d "./venv-claude" ] ; then
-    python3 -m venv venv-claude > /dev/null 2>&1
+if [ ! -d "./venv-openai" ] ; then
+    python3 -m venv venv-openai > /dev/null 2>&1
 fi
 
 # Activate the venv
-source venv-claude/bin/activate
+source venv-openai/bin/activate
 
 # Install requirements
-if [ -f "claude-requirements.txt" ]; then
-    pip install -r claude-requirements.txt > /dev/null 2>&1
+if [ -f "reqs/openai-requirements.txt" ]; then
+    pip install -r reqs/openai-requirements.txt > /dev/null 2>&1
 else
-    echo "claude-requirements.txt not found"
+    echo "reqs/openai-requirements.txt not found"
     exit 1
 fi
 
 # Run the Python script
-python3 claude-opus.py "$1"
+python3 python_scripts/gpt-3.5-turbo.py "$1"
 
 # Deactivate the venv
 deactivate

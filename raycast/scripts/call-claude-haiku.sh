@@ -1,11 +1,11 @@
 #!/bin/bash
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title claude-sonnet
+# @raycast.title call-claude-haiku
 # @raycast.mode fullOutput
 # Optional parameters:
-# @raycast.icon 🐙
-# @raycast.description Generate a sonnet response using the ANTHROPIC API
+# @raycast.icon 🌸
+# @raycast.description Generate a haiku response using the ANTHROPIC API
 # @raycast.author nbiish
 # @raycast.authorURL https://raycast.com/nbiish
 # @raycast.argument1 { "type": "text", "placeholder": "question or input" }
@@ -25,15 +25,15 @@ fi
 source venv-claude/bin/activate
 
 # Install requirements
-if [ -f "claude-requirements.txt" ]; then
-    pip install -r claude-requirements.txt > /dev/null 2>&1
+if [ -f "reqs/claude-requirements.txt" ]; then
+    pip install -r reqs/claude-requirements.txt > /dev/null 2>&1
 else
-    echo "claude-requirements.txt not found"
+    echo "reqs/claude-requirements.txt not found"
     exit 1
 fi
 
 # Run the Python script
-python3 claude-sonnet.py "$1"
+python3 python_scripts/claude-haiku.py "$1"
 
 # Deactivate the venv
 deactivate
