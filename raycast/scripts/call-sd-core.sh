@@ -1,7 +1,7 @@
 #!/bin/bash
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title call-sd3
+# @raycast.title call-sd-core
 # @raycast.mode fullOutput
 # Optional parameters:
 # @raycast.icon 🎨
@@ -35,7 +35,7 @@ else
 fi
 
 # Run the Python script
-python3 python_scripts/call-sd3.py """$1""" """$2""" """$3"""
+python3 python_scripts/call-sd-core.py """$1""" """$2""" """$3"""
 
 # Deactivate the venv
 deactivate

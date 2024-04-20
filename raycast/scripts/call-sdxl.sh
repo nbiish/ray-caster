@@ -1,16 +1,16 @@
 #!/bin/bash
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title call-sd3
+# @raycast.title call-sdxl
 # @raycast.mode fullOutput
 # Optional parameters:
 # @raycast.icon 🎨
 # @raycast.description Generate an image using the STABLE DIFFUSION API
 # @raycast.author nbiish
 # @raycast.authorURL https://raycast.com/nbiish
+
 # @raycast.argument1 { "type": "text", "placeholder": "default ratio 1:1" }
 # @raycast.argument2 { "type": "text", "placeholder": "prompt" }
-# @raycast.argument3 { "type": "text", "placeholder": "negative prompt" }
 
 # Check if Python is installed
 if ! command -v python3 &>/dev/null; then
@@ -35,7 +35,7 @@ else
 fi
 
 # Run the Python script
-python3 python_scripts/call-sd3.py """$1""" """$2""" """$3"""
+python3 python_scripts/call-sdxl.py """$1""" """$2"""
 
 # Deactivate the venv
 deactivate

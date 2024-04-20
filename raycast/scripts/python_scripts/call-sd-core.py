@@ -19,8 +19,8 @@ user_negative_prompt = sys.argv[3]
 
 
 response = requests.post(
-    f"https://api.stability.ai/v2beta/stable-image/generate/sd3",
-    headers={
+    f"https://api.stability.ai/v2beta/stable-image/generate/core",
+     headers={
         "authorization": f"{api_key}",
         "accept": "image/*"
     },
@@ -39,8 +39,8 @@ if response.status_code == 200:
     if os.path.exists(output_file):
         # Generate a unique filename using the current date and time
         timestamp = datetime.datetime.now().strftime("year:%Y_month:%m_day:%d_hr:%H_min:%M_sec:%S")
-        filename = f"sd3-generation_{timestamp}.jpeg"
-        output_file = os.path.join("photo-bin/sd3", filename)
+        filename = f"sd-core-generation_{timestamp}.jpeg"
+        output_file = os.path.join("photo-bin/sd-core", filename)
     
     with open(output_file, 'wb') as file:
         file.write(response.content)
@@ -49,3 +49,4 @@ if response.status_code == 200:
     os.system(f"osascript -e 'set the clipboard to (read (POSIX file \"{output_file}\") as JPEG picture)'")
 else:
     raise Exception(str(response.json()))
+
