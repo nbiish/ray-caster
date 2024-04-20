@@ -1,32 +1,32 @@
 # 👍🧿👄🧿💻   
 # Raycast How-To:  
-### ADDING SCRIPTS TO RAYCAST:
-```
-    1. Install [Raycast](https://www.raycast.com/)
-    2. open Raycast
-    3. press CMD+, (CMD+comma)
-    4. press CMD+n
-    5. select "add script directory"
-    6. choose ../where/you/cloned/../scripts
-```  
-### If you're using Claude, Groq, OpenAI, Google API:
-```
-# create a .env in 
-# ../where/you/cloned/../scripts
-# and enter
+### INSTALL AND ADDING SCRIPTS TO RAYCAST:
 
-touch .env
+1. Install [Raycast](https://www.raycast.com/)
+2. open Raycast
+3. press CMD+, (CMD+comma)
+4. press CMD+n
+5. select "add script directory"
+6. choose ../where/you/cloned/../scripts
 
-----------------------
+## If you're using API's for:
+### Groq, OpenAI, Google, Claude, SD
 
-# add api_keys in 
-# ../scripts
-
-echo 'SOME_API_KEY=your-key' >> .env
-```  
+    create a .env in 
+    ../where/you/cloned/../scripts
 - for an example check [.env-example](https://github.com/nbiish/ray-caster/blob/main/raycast/scripts/.env-example)
+
 - or edit../raycast/scripts/.env-example  
-(remove the -example section when done)
+
+  (remove the -example section when done)
+```
+-------------------------------------
+OR
+
+
+touch ../scripts/.env
+echo 'API_KEY=your-key' >> ../scripts/.env
+```  
 
 ---  
 ### HOW TO USE IN RAYCAST:
@@ -74,7 +74,7 @@ TODO
 - add how-to
 ```
 # Use .bashrc/.zshrc alias instead🦑🤖
-## TODO  
+## DESKTOP TODO:
 - add script that adds alias of all .sh files in ../raycast/scripts to .bashrc or .zshrc (check)  
 
 - formatt nice like..
@@ -85,8 +85,16 @@ TODO
      - ...
 
 - test a removal sed command for new script to remove from rc file when user is done  
+---
+## MOBILE TODO:
+- learn about tmux alias directory
+- learn about tmux venv
+---
+- does ollama work?
+- figure out what doesnt work
 
-## HOW-TO:
+---
+## HOW-TO-CAST-SHELL:
 ```
 1) pwd in ../where/you/cloned/../scripts
 (copy output)
