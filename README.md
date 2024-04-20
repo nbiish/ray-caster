@@ -9,7 +9,7 @@
 5. select "add script directory"
 6. choose ../where/you/cloned/../scripts
 
-## If you're using API's for:
+## If you're using API's:
 ### Groq, OpenAI, Google, Claude, StableDiffusion
 
 - for an example check [.env-example](https://github.com/nbiish/ray-caster/blob/main/raycast/scripts/.env-example)
