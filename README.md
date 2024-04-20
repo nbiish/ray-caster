@@ -39,11 +39,15 @@ USAGE EXAMPLES:
 --------------------------------------------
 {raycast hotkey} + ollama-solve "some-text"
 
-{raycast hotkey} + claude-haiku "some-text"
+{raycast hotkey} + ollama-choose "model name" "prompt"
 
-{raycast hotkey} + groq-amole "some-text"
+{raycast hotkey} + call-claude-haiku "some-text"
 
-{raycast hotkey} + gem-in-ai "some-text"
+{raycast hotkey} + call-groq-amole "some-text"
+
+{raycast hotkey} + call-gem-in-ai "some-text"
+
+{raycast hotkey} + call-sd3 "ratio" "prompt" "neg-prompt"
 ```
 ### Customize scripts in:
 
