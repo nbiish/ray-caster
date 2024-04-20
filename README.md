@@ -10,7 +10,7 @@
 6. choose ../where/you/cloned/../scripts
 
 ## If you're using API's for:
-### Groq, OpenAI, Google, Claude, SD
+### Groq, OpenAI, Google, Claude, StableDiffusion
 
     create a .env in 
     ../where/you/cloned/../scripts
