@@ -12,19 +12,20 @@
 ## If you're using API's for:
 ### Groq, OpenAI, Google, Claude, StableDiffusion
 
-    create a .env in 
-    ../where/you/cloned/../scripts
 - for an example check [.env-example](https://github.com/nbiish/ray-caster/blob/main/raycast/scripts/.env-example)
 
-- or edit../raycast/scripts/.env-example  
-
-  (remove the -example section when done)
 ```
+
+edit:
+
+../raycast/scripts/.env-example
+
+        (remove '-example' when done)
 -------------------------------------
 OR
 
 
-touch ../scripts/.env
+touch ..scripts/.env
 echo 'API_KEY=your-key' >> ../scripts/.env
 ```  
 
@@ -32,7 +33,7 @@ echo 'API_KEY=your-key' >> ../scripts/.env
 ### HOW TO USE IN RAYCAST:
 
 ```
-1) use raycast raycast hotkey
+1) use {raycast hotkey}
 2) type name of script
 
 
