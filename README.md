@@ -1,12 +1,13 @@
 # 👍🧿👄🧿💻   
-# [Raycast](https://www.raycast.com/) stuff:  
+# Raycast How-To:  
 ### ADDING SCRIPTS TO RAYCAST:
 ```
-    1. open raycast
-    2. press CMD+, <--(CMD+comma)
-    3. press CMD+n
-    4. select "add script directory"
-    5. choose ../where/you/cloned/../scripts
+    1. Install [Raycast](https://www.raycast.com/)
+    2. open Raycast
+    3. press CMD+, (CMD+comma)
+    4. press CMD+n
+    5. select "add script directory"
+    6. choose ../where/you/cloned/../scripts
 ```  
 ### If you're using Claude, Groq, OpenAI, Google API:
 ```
