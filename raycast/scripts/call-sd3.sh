@@ -8,7 +8,7 @@
 # @raycast.description Generate an image using the STABLE DIFFUSION API
 # @raycast.author nbiish
 # @raycast.authorURL https://raycast.com/nbiish
-# @raycast.argument1 { "type": "text", "placeholder": "default ratio 1:1" }
+# @raycast.argument1 { "type": "text", "placeholder": "ratio width:length" }
 # @raycast.argument2 { "type": "text", "placeholder": "prompt" }
 # @raycast.argument3 { "type": "text", "placeholder": "negative prompt" }
 

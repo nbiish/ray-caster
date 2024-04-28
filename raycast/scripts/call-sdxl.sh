@@ -9,7 +9,7 @@
 # @raycast.author nbiish
 # @raycast.authorURL https://raycast.com/nbiish
 
-# @raycast.argument1 { "type": "text", "placeholder": "default ratio 1:1" }
+# @raycast.argument1 { "type": "text", "placeholder": "ratio width:length" }
 # @raycast.argument2 { "type": "text", "placeholder": "prompt" }
 
 # Check if Python is installed
