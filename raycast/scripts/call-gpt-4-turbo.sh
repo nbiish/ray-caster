@@ -1,11 +1,11 @@
 #!/bin/bash
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title call-gpt-4-turbo
+# @raycast.title call-gpt-4o
 # @raycast.mode fullOutput
 # Optional parameters:
 # @raycast.icon 🦾
-# @raycast.description Generate a GPT4-turbo response using the OPENAI API
+# @raycast.description Generate a GPT4o response using the OPENAI API
 # @raycast.author nbiish
 # @raycast.authorURL https://raycast.com/nbiish
 # @raycast.argument1 { "type": "text", "placeholder": "question or input" }

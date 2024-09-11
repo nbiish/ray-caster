@@ -15,7 +15,7 @@
 # @raycast.argument1 { "type": "text", "placeholder": "model" }
 # @raycast.argument2 { "type": "text", "placeholder": "content.." }
 
-model_list=("dolphin-llama3" "codegemma" "codeqwen" "phi" "gemma" "llama2-uncensored" "mistral" "wizard-math" "wizard-vicuna-uncensored" "wizardlm2")  # List of available models
+model_list=("llama3-gradient" "dolphin-llama3" "codegemma" "codeqwen" "phi" "gemma" "mistral" "wizard-math" "wizard-vicuna-uncensored" "wizardlm2")  # List of available models
 
 model="$1"
 user_content="""$2"""

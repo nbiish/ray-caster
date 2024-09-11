@@ -17,7 +17,7 @@ api_key=os.getenv("OPENAI_API_KEY")
 prompt = sys.argv[1]
 
 response = client.chat.completions.create(
-  model="gpt-4-turbo",
+  model="gpt-4o",
   messages=[
     {
       "role": "system",
@@ -36,8 +36,8 @@ response = client.chat.completions.create(
 )
 
 #Calculate the costs
-input_cost = response.usage.prompt_tokens * 10.00 / 1000000
-output_cost = response.usage.completion_tokens * 30.00 / 1000000
+input_cost = response.usage.prompt_tokens * 5.00 / 1000000
+output_cost = response.usage.completion_tokens * 15.00 / 1000000
 in_tokens = response.usage.prompt_tokens
 out_tokens = response.usage.completion_tokens
 total_tokens = response.usage.total_tokens

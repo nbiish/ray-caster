@@ -10,7 +10,7 @@ from langchain_google_genai import GoogleGenerativeAI, HarmBlockThreshold, HarmC
 load_dotenv()
 api_key = os.getenv("GOOGLE_AI_STUDIO_KEY")
 
-# FOR MAKING A SYSTEM MESSAGE
+# #FOR MAKING A SYSTEM MESSAGE
 # from langchain_core.messages import HumanMessage, SystemMessage
 
 # model = ChatGoogleGenerativeAI(model="gemini-pro", convert_system_message_to_human=True)

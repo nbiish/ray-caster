@@ -35,8 +35,8 @@ echo ''
 
 
 
-response1=$(ollama run $model $post_about)
-printf "\n\n BEFORE EMOJIS$response1\n\n"
+response1=$(ollama run $model """CREATE AN ENGAGING SOCIAL-MEDIA POST ABOUT THE FOLLOWING:\n$post_about""")
+printf "\n\n BEFORE EMOJIS\n$response1\n\n"
 
 
 
@@ -45,7 +45,7 @@ system_prompt1="""ADD EMOJIS TO THE FOLLOWING:"""
 with_system_prompt1="$system_prompt1$response1"
 
 second_response=$(ollama run $model """$with_system_prompt1""")
-printf "\n\nBEFORE HASHTAGS$second_response\n\n"
+printf "\n\nBEFORE HASHTAGS\n$second_response\n\n"
 
 
 
@@ -54,4 +54,4 @@ system_prompt2="""ADD HASHTAGS THROUGHOUT THE FOLLOWING:"""
 with_system_prompt2="$system_prompt2$second_response"
 
 third_response=$(ollama run $model """$with_system_prompt2""")
-printf "\n\nFINAL RESULT$third_response\n\n"
+printf "\n\nFINAL RESULT\n$third_response\n\n"
