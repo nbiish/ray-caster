@@ -23,19 +23,19 @@ response = requests.post(
     files={"none": ''},
     data={
         "prompt": f"{user_prompt}",
-        "model": "sd3-turbo",
+        "model": "sd3.5-large-turbo",
         "output_format": "jpeg",
     },
 )
 
-output_file = "photo-bin/sd3-turbo/sd3-turbo-generation.jpeg"
+output_file = "photo-bin/sd3.5-turbo/sd3.5-turbo-generation.jpeg"
 
 if response.status_code == 200:
     if os.path.exists(output_file):
         # Generate a unique filename using the current date and time
         timestamp = datetime.datetime.now().strftime("year:%Y_month:%m_day:%d_hr:%H_min:%M_sec:%S")
-        filename = f"sd3-turbo-generation_{timestamp}.jpeg"
-        output_file = os.path.join("photo-bin/sd3-turbo", filename)
+        filename = f"sd3.5-turbo-generation_{timestamp}.jpeg"
+        output_file = os.path.join("photo-bin/sd3.5-turbo", filename)
     
     with open(output_file, 'wb') as file:
         file.write(response.content)

@@ -1,7 +1,7 @@
 #!/bin/bash
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title call-sd3-turbo
+# @raycast.title call-sd3.5-turbo
 # @raycast.mode fullOutput
 # Optional parameters:
 # @raycast.icon 🎨
@@ -37,7 +37,7 @@ else
 fi
 
 # Run the Python script
-python3 python_scripts/call-sd3-turbo.py """$user_prompt"""
+python3 python_scripts/call-sd3.5-turbo.py """$user_prompt"""
 
 # Deactivate the venv
 deactivate
