@@ -1,7 +1,7 @@
 #!/bin/bash
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title open-groq-playground
+# @raycast.title ai-open-groq-playground
 # @raycast.mode fullOutput
 # Optional parameters:
 # @raycast.icon 💨

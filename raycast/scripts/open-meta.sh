@@ -1,7 +1,7 @@
 #!/bin/bash
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title open-meta
+# @raycast.title ai-open-meta
 # @raycast.mode fullOutput
 # Optional parameters:
 # @raycast.icon 💨

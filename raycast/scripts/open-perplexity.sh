@@ -1,7 +1,7 @@
 #!/bin/bash
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title open-perplexity
+# @raycast.title ai-open-perplexity
 # @raycast.mode fullOutput
 # Optional parameters:
 # @raycast.icon 🧠

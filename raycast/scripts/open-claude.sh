@@ -1,7 +1,7 @@
 #!/bin/bash
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title open-claude
+# @raycast.title ai-open-claude
 # @raycast.mode fullOutput
 # Optional parameters:
 # @raycast.icon 🤖

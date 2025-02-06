@@ -1,7 +1,7 @@
 #!/bin/bash
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title open-gemini
+# @raycast.title ai-open-gemini
 # @raycast.mode fullOutput
 # Optional parameters:
 # @raycast.icon 💎

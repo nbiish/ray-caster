@@ -1,7 +1,7 @@
 #!/bin/bash
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title open-chatgpt
+# @raycast.title ai-open-chatgpt
 # @raycast.mode fullOutput
 # Optional parameters:
 # @raycast.icon 🐙
