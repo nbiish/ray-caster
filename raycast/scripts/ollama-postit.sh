@@ -15,7 +15,7 @@
 # @raycast.argument1 { "type": "text", "placeholder": "model" }
 # @raycast.argument2 { "type": "text", "placeholder": "post about.." }
 
-model_list=("dolphin-llama3" "codegemma" "codeqwen" "phi" "gemma" "llama2-uncensored" "mistral" "wizard-math" "wizard-vicuna-uncensored" "wizardlm2")  # List of available models
+model_list=("phi4-mini" "granite-dense" "granite-moe" "granite3.1-dense" "granite3.1-moe" "granite-embedding" "mxbai-embed-large" "phi4" "granite-vision" "granite3.2-vision" "granite" "granite3.2" "deepseek" "deepseek-r1:8b")  # List of available models
 
 model="$1"
 post_about="""$2"""
