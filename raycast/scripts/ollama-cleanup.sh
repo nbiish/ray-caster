@@ -164,5 +164,6 @@ case "$action" in
     ;;
 esac
 
+
 echo ""
 echo "Done! You can now use the consolidated ollama.sh script for all operations." 

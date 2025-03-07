@@ -6,6 +6,8 @@ import sys
 import requests
 import datetime
 import base64
+import subprocess
+import re  # Import regex module for sanitization
 
 # Load the .env file
 load_dotenv()
@@ -17,8 +19,8 @@ ratio_dict = {
     "16:9": (1152, 896),
     "9:16": (896, 1152),
     "11:8": (1216, 832),
-    "16:9": (1344, 768),
-    "9:16": (768, 1344),
+    "16:9-large": (1344, 768),
+    "9:16-large": (768, 1344),
     "24:10": (1536, 640),
     "10:24": (640, 1536)
 }
@@ -61,15 +63,41 @@ if response.status_code != 200:
 
 data = response.json()
 
+# Create a safe base path for storing images
+base_path = os.path.abspath("photo-bin/sdxl")
+# Ensure the directory exists
+os.makedirs(base_path, exist_ok=True)
+
+# Function to sanitize filenames
+def sanitize_filename(filename):
+    # Remove any potentially dangerous characters
+    # Keep only alphanumeric, dash, underscore, and period
+    sanitized = re.sub(r'[^\w\-\.]', '_', filename)
+    # Ensure no directory traversal is possible
+    sanitized = os.path.basename(sanitized)
+    return sanitized
+
 for i, image in enumerate(data["artifacts"]):
-    output_file = f"photo-bin/sdxl/v1_txt2img_{i}.png"
+    # Safely construct the filename with numeric index and sanitize it
+    safe_filename = sanitize_filename(f"v1_txt2img_{i}.png")
     if response.status_code == 200:
-        if os.path.exists(output_file):
+        if os.path.exists(os.path.join(base_path, safe_filename)):
             # Generate a unique filename using the current date and time
-            timestamp = datetime.datetime.now().strftime("year:%Y_month:%m_day:%d_hr:%H_min:%M_sec:%S")
-            filename = f"sdxl-generation_{timestamp}.jpeg"
-            output_file = os.path.join("photo-bin/sdxl", filename)
+            timestamp = datetime.datetime.now().strftime("year%Y_month%m_day%d_hr%H_min%M_sec%S")
+            safe_filename = sanitize_filename(f"sdxl-generation_{timestamp}.jpeg")
+    
+    # Safely join paths
+    output_file = os.path.join(base_path, safe_filename)
+    
+    # Validate the final path is within the expected directory
+    if not os.path.abspath(output_file).startswith(base_path):
+        raise ValueError(f"Invalid path detected: {output_file}")
+        
     with open(output_file, "wb") as f:
         f.write(base64.b64decode(image["base64"]))
     # After saving the image file
-    os.system(f"osascript -e 'set the clipboard to (read (POSIX file \"{os.path.abspath(output_file)}\") as JPEG picture)'")
+    subprocess.run([
+        "osascript", 
+        "-e", 
+        f'set the clipboard to (read (POSIX file "{os.path.abspath(output_file)}") as JPEG picture)'
+    ], check=True)
