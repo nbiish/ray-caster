@@ -2,7 +2,7 @@
 
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title Ollama
+# @raycast.title Run Ollama
 # @raycast.mode fullOutput
 
 # Optional parameters:

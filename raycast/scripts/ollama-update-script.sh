@@ -10,21 +10,21 @@
 # @raycast.packageName Ollama Tools
 
 # Documentation:
-# @raycast.description Update the ollama.sh script with current models
+# @raycast.description Update the run-ollama.sh script with current models
 # @raycast.author nbiish
 # @raycast.authorURL https://raycast.com/nbiish
 
 script_dir="$(dirname "$0")"
-ollama_script="${script_dir}/ollama.sh"
-temp_file="${script_dir}/ollama.sh.tmp"
+ollama_script="${script_dir}/run-ollama.sh"
+temp_file="${script_dir}/run-ollama.sh.tmp"
 
 # Check if the ollama script exists
 if [ ! -f "$ollama_script" ]; then
-  echo "Error: ollama.sh not found in ${script_dir}"
+  echo "Error: run-ollama.sh not found in ${script_dir}"
   exit 1
 fi
 
-echo "Updating ollama.sh with current models..."
+echo "Updating run-ollama.sh with current models..."
 
 # Get list of installed models
 echo "Fetching installed Ollama models..."
@@ -77,4 +77,4 @@ else
 fi
 
 echo ""
-echo "Done! The ollama.sh script now contains the latest models." 
+echo "Done! The run-ollama.sh script now contains the latest models." 
